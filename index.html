@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AudioDF Dataset Showcase</title>
+  <title>AudioDF Synthetic Dataset</title>
   <!-- Tailwind via CDN for quick styling (no build step) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Lucide icons -->
@@ -42,13 +42,11 @@
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
     <div class="grid md:grid-cols-2 gap-8 items-center">
       <div>
-        <h2 class="text-3xl font-bold tracking-tight mb-3">Listen • Inspect • Reuse</h2>
-        <p class="text-slate-700 leading-relaxed">This page hosts examples from the <span class="font-semibold">AudioDF</span> project: ten reference voices, per-dataset samples (real & synthetic), and interactive <span class="font-semibold">TextGrid</span> visualizations. Everything is designed for reproducible research and easy citation.</p>
+        <h2 class="text-3xl font-bold tracking-tight mb-3">Sample Audios • Inspect • Reuse</h2>
+        <p class="text-slate-700 leading-relaxed">This page shows examples from the <span class="font-semibold">AudioDF</span> project: the ten reference voices, per-dataset samples (real & synthetic), and exapmple <span class="font-semibold">TextGrid</span> visualizations.</p>
         <div class="flex flex-wrap gap-2 mt-4">
           <span class="badge">16 kHz WAV</span>
-          <span class="badge">TextGrid (MFA)</span>
-          <span class="badge">WavLM/HuBERT/W2V2 ready</span>
-          <span class="badge">CC-BY / Research Use</span>
+          <span class="badge">TextGrid (from MFA)</span>
         </div>
       </div>
       <div class="bg-white p-6 rounded-2xl card">
@@ -256,7 +254,7 @@
         title: r.name,
         subtitle: r.note,
         wav: r.wav,
-        chips: ['Reference', '16 kHz']
+        //chips: ['Reference', '16 kHz']
       })).join('');
 
       // Render datasets

@@ -43,9 +43,9 @@
     <div class="grid md:grid-cols-2 gap-8 items-center">
       <div>
         <h2 class="text-3xl font-bold tracking-tight mb-3">Sample Audios • Inspect • Reuse</h2>
-        <p class="text-slate-700 leading-relaxed">This page shows examples from the <span class="font-semibold">AudioDF</span> project: the ten reference voices, per-dataset samples (real & synthetic), and exapmple <span class="font-semibold">TextGrid</span> visualizations.</p>
+        <p class="text-slate-700 leading-relaxed">This page shows examples from the <span class="font-semibold">AudioDF</span> project: the ten reference voices, per-dataset samples (real & synthetic), and example <span class="font-semibold">TextGrid</span> visualizations.</p>
         <div class="flex flex-wrap gap-2 mt-4">
-          <span class="badge">16 kHz WAV</span>
+          <span class="badge">WAV (16 kHz)</span>
           <span class="badge">TextGrid (from MFA)</span>
         </div>
       </div>
@@ -147,8 +147,10 @@
     const datasetSamples = [
       {
         dataset: 'Real (LibriSpeech TC-100)', type: 'real', items: [
-          { id: 'real_utt01', name: 'Natural #1', wav: `${BASE}/assets/real/utt01.wav`, text: 'The quick brown fox...', tg: `${BASE}/assets/real/utt01.TextGrid` },
-          { id: 'real_utt02', name: 'Natural #2', wav: `${BASE}/assets/real/utt02.wav`, text: 'A wizard’s job is to vex...', tg: `${BASE}/assets/real/utt02.TextGrid` },
+          { id: 'real_utt01', name: 'Natural #1', wav: `${BASE}/assets/real/utt01.wav`, text: 'THE PUBLIC ARE ENTREATED TO BEAR IN MIND THAT THIRTEEN YEARS HAVE PASSED SINCE IT WAS FINISHED MANY MORE SINCE IT WAS BEGUN AND THAT DURING THAT PERIOD PLACES MANNERS BOOKS AND OPINIONS HAVE UNDERGONE CONSIDERABLE CHANGES
+', tg: `${BASE}/assets/real/utt01.TextGrid` },
+          { id: 'real_utt02', name: 'Natural #2', wav: `${BASE}/assets/real/utt02.wav`, text: 'THE CHARACTER OF HER FATHER AND MOTHER HER OWN PERSON AND DISPOSITION WERE ALL EQUALLY AGAINST HER HER FATHER WAS A CLERGYMAN WITHOUT BEING NEGLECTED OR POOR AND A VERY RESPECTABLE MAN
+', tg: `${BASE}/assets/real/utt02.TextGrid` },
         ]
       },
       {

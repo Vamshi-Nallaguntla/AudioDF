@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AudioDF Synthetic Dataset</title>
+  <title>PhonemeDF Synthetic Dataset</title>
   <!-- Tailwind via CDN for quick styling (no build step) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Lucide icons -->
@@ -27,7 +27,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
       <div class="flex items-center gap-3">
         <div class="w-8 h-8 rounded-xl bg-indigo-600"></div>
-        <h1 class="text-lg sm:text-xl font-semibold tracking-tight">AudioDF Dataset Showcase</h1>
+        <h1 class="text-lg sm:text-xl font-semibold tracking-tight">PhonemeDF Dataset</h1>
       </div>
       <nav class="hidden md:flex items-center gap-6 text-sm">
         <a href="#references" class="hover:text-indigo-700">Reference Voices</a>
@@ -42,11 +42,11 @@
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
     <div class="grid md:grid-cols-2 gap-8 items-center">
       <div>
-        <h2 class="text-3xl font-bold tracking-tight mb-3">Sample Audios • Inspect • Reuse</h2>
-        <p class="text-slate-700 leading-relaxed">This page shows examples from the <span class="font-semibold">Phoneme AudioDF</span> project: the ten reference voices, per-dataset samples (real & synthetic), and example <span class="font-semibold">TextGrid</span> visualizations.</p>
+        <h2 class="text-3xl font-bold tracking-tight mb-3">Example Audios • Example TextGrids</h2>
+        <p class="text-slate-700 leading-relaxed">This page shows examples from the <span class="font-semibold">PhonemeDF</span> project: the ten reference voices, per-dataset samples (real & synthetic), and downloadable example <span class="font-semibold">TextGrids</span>.</p>
         <div class="flex flex-wrap gap-2 mt-4">
-          <span class="badge">WAV (16 kHz)</span>
-          <span class="badge">TextGrid (from MFA)</span>
+          <span class="badge">Audios are in 16 kHz wav format</span>
+          <span class="badge">TextGrids are from MFA</span>
         </div>
       </div>
       <div class="bg-white p-6 rounded-2xl card">
@@ -120,13 +120,13 @@
   </section>
 
   <footer class="py-10 text-center text-slate-500 text-sm">
-    © <span id="yr"></span> AudioDF • Built for reproducible audio deepfake research.
+    © <span id="yr"></span> PhonemeDF • Built for reproducible audio deepfake research.
   </footer>
 
   <!-- ===================== DATA (edit this) ===================== -->
   <script>
     // Change these paths to match your repo. Suggest storing assets under /assets/... in the same repo.
-    const BASE = '/AudioDF'; // empty means relative to current site; e.g., '/AudioDF' if needed
+    const BASE = '/PhonemeDF'; // empty means relative to current site; e.g., '/AudioDF' if needed
 
     // 10 reference voices (update names/paths). Keep WAV at 16 kHz.
     const referenceVoices = [
@@ -153,37 +153,44 @@
       },
       {
         dataset: 'Melo TTS', type: 'tts', items: [
-          { id: 'melo_01', name: 'Melo sample 1', wav: `${BASE}/assets/melo/melo_01.wav`, text: 'She sells seashells by the seashore.', tg: `${BASE}/assets/melo/melo_01.TextGrid` },
+          { id: 'melo_01', name: 'Melo sample 1', wav: `${BASE}/assets/audio_samples/19-198-0003-MeloTTS.wav`, text: 'She sells seashells by the seashore.', tg: `${BASE}/assets/melo/melo_01.TextGrid` },
+          { id: 'melo_01', name: 'Melo sample 1', wav: `${BASE}/assets/audio_samples/19-198-0005-MeloTTS.wav`, text: 'She sells seashells by the seashore.', tg: `${BASE}/assets/melo/melo_01.TextGrid` }
         ]
       },
       {
         dataset: 'XTTS v2', type: 'tts', items: [
-          { id: 'xtts_01', name: 'XTTS sample 1', wav: `${BASE}/assets/xtts/xtts_01.wav`, text: 'Peter Piper picked...', tg: `${BASE}/assets/xtts/xtts_01.TextGrid` },
+          { id: 'xtts_01', name: 'XTTS sample 1', wav: `${BASE}/assets/audio_samples/19-198-0003-Real.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` },
+          { id: 'xtts_01', name: 'XTTS sample 1', wav: `${BASE}/assets/audio_samples/19-198-0003-Real.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` }
         ]
       },
       {
         dataset: 'Chatterbox TTS', type: 'tts', items: [
-          { id: 'chtts_01', name: 'ChTTS sample 1', wav: `${BASE}/assets/chtts/chtts_01.wav`, text: 'Pack my box with five dozen liquor jugs.', tg: `${BASE}/assets/chtts/chtts_01.TextGrid` },
+          { id: 'chtts_01', name: 'ChTTS sample 1', wav: `${BASE}/assets/audio_samples/19-198-0003-Real.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` },
+          { id: 'chtts_01', name: 'ChTTS sample 1', wav: `${BASE}/assets/audio_samples/19-198-0003-Real.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` }
         ]
       },
       {
         dataset: 'VITS', type: 'tts', items: [
-          { id: 'vits_01', name: 'VITS sample 1', wav: `${BASE}/assets/vits/vits_01.wav`, text: 'Sphinx of black quartz, judge my vow.', tg: `${BASE}/assets/vits/vits_01.TextGrid` },
+          { id: 'vits_01', name: 'VITS sample 1', wav: `${BASE}/assets/audio_samples/19-198-0003-Real.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` },
+          { id: 'vits_01', name: 'VITS sample 1', wav: `${BASE}/assets/audio_samples/19-198-0003-Real.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` }
         ]
       },
       {
         dataset: 'Chatterbox VC', type: 'vc', items: [
-          { id: 'chvc_01', name: 'ChVC → p228', wav: `${BASE}/assets/chvc/chvc_p228_01.wav`, text: 'How quickly daft jumping zebras vex.', tg: `${BASE}/assets/chvc/chvc_p228_01.TextGrid` },
+          { id: 'chvc_01', name: 'ChVC → p228', wav: `${BASE}/assets/audio_samples/19-198-0003-Real.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` },
+          { id: 'chvc_01', name: 'ChVC → p228', wav: `${BASE}/assets/audio_samples/19-198-0003-Real.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` }
         ]
       },
       {
         dataset: 'FreeVC', type: 'vc', items: [
-          { id: 'freevc_01', name: 'FreeVC → p243', wav: `${BASE}/assets/freevc/freevc_p243_01.wav`, text: 'The five boxing wizards jump quickly.', tg: `${BASE}/assets/freevc/freevc_p243_01.TextGrid` },
+          { id: 'freevc_01', name: 'FreeVC → p243', wav: `${BASE}/assets/audio_samples/19-198-0003-Real.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` },
+          { id: 'freevc_01', name: 'FreeVC → p243', wav: `${BASE}/assets/audio_samples/19-198-0003-Real.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` }
         ]
       },
       {
         dataset: 'StarGAN-VC', type: 'vc', items: [
-          { id: 'stargan_01', name: 'StarGAN → p228', wav: `${BASE}/assets/stargan/stargan_p228_01.wav`, text: 'Waltz, bad nymph, for quick jigs vex.', tg: `${BASE}/assets/stargan/stargan_p228_01.TextGrid` },
+          { id: 'stargan_01', name: 'StarGAN → p228', wav: `${BASE}/assets/audio_samples/19-198-0003-Real.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` },
+          { id: 'stargan_01', name: 'StarGAN → p228', wav: `${BASE}/assets/audio_samples/19-198-0003-Real.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` }
         ]
       },
     ];

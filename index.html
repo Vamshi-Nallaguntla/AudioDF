@@ -110,12 +110,15 @@
   <section id="howto" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
     <div class="bg-white rounded-2xl card p-6">
       <h3 class="text-2xl font-bold mb-2">How to Use & Cite</h3>
-      <p class="text-slate-700">Put your WAV and TextGrid files under <code>/assets/</code> in this repo. Update the metadata below and push—GitHub Pages redeploys automatically. For citation, include a link to this page and the commit hash. You can also add a <code>CITATION.cff</code> file at the repo root.</p>
+      <p class="text-slate-700">We will update this once accepted.</p>
+      <ul class="list-disc ml-6 mt-3 text-slate-700">
+      <!--<p class="text-slate-700">Put your WAV and TextGrid files under <code>/assets/</code> in this repo. Update the metadata below and push—GitHub Pages redeploys automatically. For citation, include a link to this page and the commit hash. You can also add a <code>CITATION.cff</code> file at the repo root.</p>
       <ul class="list-disc ml-6 mt-3 text-slate-700">
         <li><span class="font-medium">Licensing:</span> Add <code>LICENSE</code> clarifying research use.</li>
         <li><span class="font-medium">Provenance:</span> Keep per-file JSON with generator (XTTS/FreeVC/etc.), reference ID, transcript.</li>
         <li><span class="font-medium">Repro:</span> Provide scripts to regenerate examples from source IDs.</li>
-      </ul>
+      </ul> 
+      -->
     </div>
   </section>
 
@@ -147,50 +150,50 @@
     const datasetSamples = [
       {
         dataset: 'Train-clean-100', type: 'real', items: [
-          { id: 'real_utt01', name: 'Natural #1', wav: `${BASE}/assets/audio_samples/19-198-0003-Real.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` },
-          { id: 'real_utt02', name: 'Natural #2', wav: `${BASE}/assets/audio_samples/19-198-0005-Real.wav`, text: 'THE CHARACTE', tg: `${BASE}/assets/textgrid_samples/19-198-0005-Real.TextGrid` },
+          { id: 'real_utt01', name: 'Real sample 1', wav: `${BASE}/assets/audio_samples/19-198-0003-Real.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` },
+          { id: 'real_utt02', name: 'Real sample 2', wav: `${BASE}/assets/audio_samples/19-198-0005-Real.wav`, text: 'THE CHARACTE', tg: `${BASE}/assets/textgrid_samples/19-198-0005-Real.TextGrid` },
         ]
       },
       {
         dataset: 'Melo TTS', type: 'tts', items: [
-          { id: 'melo_01', name: 'Melo sample 1', wav: `${BASE}/assets/audio_samples/19-198-0003-MeloTTS.wav`, text: 'She sells seashells by the seashore.', tg: `${BASE}/assets/melo/melo_01.TextGrid` },
-          { id: 'melo_01', name: 'Melo sample 1', wav: `${BASE}/assets/audio_samples/19-198-0005-MeloTTS.wav`, text: 'She sells seashells by the seashore.', tg: `${BASE}/assets/melo/melo_01.TextGrid` }
+          { id: 'melo_01', name: 'Sample 1', wav: `${BASE}/assets/audio_samples/19-198-0003-MeloTTS.wav`, text: 'She sells seashells by the seashore.', tg: `${BASE}/assets/melo/melo_01.TextGrid` },
+          { id: 'melo_01', name: 'Sample 2', wav: `${BASE}/assets/audio_samples/19-198-0005-MeloTTS.wav`, text: 'She sells seashells by the seashore.', tg: `${BASE}/assets/melo/melo_01.TextGrid` }
         ]
       },
       {
         dataset: 'XTTS v2', type: 'tts', items: [
-          { id: 'xtts_01', name: 'XTTS sample 1', wav: `${BASE}/assets/audio_samples/19-198-0003-Real.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` },
-          { id: 'xtts_01', name: 'XTTS sample 1', wav: `${BASE}/assets/audio_samples/19-198-0003-Real.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` }
+          { id: 'xtts_01', name: 'Sample 1', wav: `${BASE}/assets/audio_samples/19-198-0003-XTTSv2.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` },
+          { id: 'xtts_01', name: 'Sample 2', wav: `${BASE}/assets/audio_samples/19-198-0005-XTTSv2.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` }
         ]
       },
       {
         dataset: 'Chatterbox TTS', type: 'tts', items: [
-          { id: 'chtts_01', name: 'ChTTS sample 1', wav: `${BASE}/assets/audio_samples/19-198-0003-Real.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` },
-          { id: 'chtts_01', name: 'ChTTS sample 1', wav: `${BASE}/assets/audio_samples/19-198-0003-Real.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` }
+          { id: 'chtts_01', name: 'Sample 1', wav: `${BASE}/assets/audio_samples/19-198-0003-ChTTS.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` },
+          { id: 'chtts_01', name: 'Sample 2', wav: `${BASE}/assets/audio_samples/19-198-0005-ChTTS.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` }
         ]
       },
       {
         dataset: 'VITS', type: 'tts', items: [
-          { id: 'vits_01', name: 'VITS sample 1', wav: `${BASE}/assets/audio_samples/19-198-0003-Real.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` },
-          { id: 'vits_01', name: 'VITS sample 1', wav: `${BASE}/assets/audio_samples/19-198-0003-Real.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` }
+          { id: 'vits_01', name: 'Sample 1', wav: `${BASE}/assets/audio_samples/19-198-0003-vitsTTS.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` },
+          { id: 'vits_01', name: 'Sample 2', wav: `${BASE}/assets/audio_samples/19-198-0005-vitsTTS.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` }
         ]
       },
       {
         dataset: 'Chatterbox VC', type: 'vc', items: [
-          { id: 'chvc_01', name: 'ChVC → p228', wav: `${BASE}/assets/audio_samples/19-198-0003-Real.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` },
-          { id: 'chvc_01', name: 'ChVC → p228', wav: `${BASE}/assets/audio_samples/19-198-0003-Real.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` }
+          { id: 'chvc_01', name: 'Sample 1', wav: `${BASE}/assets/audio_samples/19-198-0003-ChVC.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` },
+          { id: 'chvc_01', name: 'Sample 2', wav: `${BASE}/assets/audio_samples/19-198-0005-ChVC.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` }
         ]
       },
       {
         dataset: 'FreeVC', type: 'vc', items: [
-          { id: 'freevc_01', name: 'FreeVC → p243', wav: `${BASE}/assets/audio_samples/19-198-0003-Real.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` },
-          { id: 'freevc_01', name: 'FreeVC → p243', wav: `${BASE}/assets/audio_samples/19-198-0003-Real.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` }
+          { id: 'freevc_01', name: 'Sample 1', wav: `${BASE}/assets/audio_samples/19-198-0003-FreeVC.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` },
+          { id: 'freevc_01', name: 'Sample 2', wav: `${BASE}/assets/audio_samples/19-198-0005-FreeVC.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` }
         ]
       },
       {
         dataset: 'StarGAN-VC', type: 'vc', items: [
-          { id: 'stargan_01', name: 'StarGAN → p228', wav: `${BASE}/assets/audio_samples/19-198-0003-Real.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` },
-          { id: 'stargan_01', name: 'StarGAN → p228', wav: `${BASE}/assets/audio_samples/19-198-0003-Real.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` }
+          { id: 'stargan_01', name: 'Sample 1', wav: `${BASE}/assets/audio_samples/19-198-0003-sgVC.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` },
+          { id: 'stargan_01', name: 'Sample 2', wav: `${BASE}/assets/audio_samples/19-198-0005-sgVC.wav`, text: 'THE CHANGES', tg: `${BASE}/assets/textgrid_samples/19-198-0003-Real.TextGrid` }
         ]
       },
     ];
